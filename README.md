@@ -53,3 +53,9 @@ this.$dialog({
     }
 })
 ```
+
+loading组件
+
+```html
+<v-loading :isLoading="isLoading"></v-loading>
+```

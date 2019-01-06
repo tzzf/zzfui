@@ -4,7 +4,7 @@
       <div @click="check">787867887798</div>
       <v-button type="default">默认按钮</v-button>
       <v-button type="primary">主要按钮</v-button>
-      <v-button type="warn">警告按钮</v-button>
+      <v-button type="warn" @click="check">警告按钮</v-button>
       <v-loading :isLoading="isLoading"></v-loading>
   </div>
 </template>
