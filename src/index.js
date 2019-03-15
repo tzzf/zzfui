@@ -1,6 +1,6 @@
-import Button from '../packages/button'
-import Loading from '../packages/loading'
-import $Dialog from '../packages/dialog/dialog.js'
+import Button from '../packages/button/src'
+import Loading from '../packages/loading/src'
+import $Dialog from '../packages/dialog/index.js'
 
 const install = function (Vue) {
   if (install.installed) return

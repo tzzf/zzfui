@@ -1,0 +1,6 @@
+{
+  "zzfui": "./src/index.js",
+  "button": "./packages/button/index.js",
+  "loading": "./packages/loading/index.js",
+  "dialog": "./packages/dialog/index.js"
+}

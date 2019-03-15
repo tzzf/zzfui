@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-var DialogConstructor = Vue.extend(require('./index.vue').default)
+var DialogConstructor = Vue.extend(require('./src/index.vue').default)
 
 var instance = new DialogConstructor({
   el: document.createElement('div')
@@ -28,6 +28,12 @@ var Dialog = function (options) {
   document.body.appendChild(instance.$el)
   document.body.classList.add('v-dialog__overflow-hidden')
   // document.getElementsByTagName('html')[0].style.overflow = 'hidden !important'
+}
+
+// export default Dialog
+Dialog.install = function (Vue) {
+  Vue.component(Dialog.name, Dialog)
+  Vue.prototype.$dialog = Dialog
 }
 
 export default Dialog

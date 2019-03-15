@@ -7,12 +7,33 @@ npm i zzfui -S
 ```
 
 
+
 ### 引入
 ```javascript
 import zzfui from 'zzfui'
 import 'zzfui/lib/zzf-css/index.css'
 
 Vue.use(zzfui)
+
+// or 按需加载（需要引入插件babel-plugin-component）
+import {
+  Button
+  // ...
+} from 'zzfui'
+import 'zzfui/lib/zzf-css/index.css'
+
+Vue.use(Button)
+// 在.babelrc中按需加载插件
+"plugins": [
+    [
+      "component",
+      {
+        "libraryName": "zzfui",
+        "styleLibraryName": "zzf-css"
+      }
+    ]
+]
+
 ```
 
 ### 使用

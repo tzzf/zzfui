@@ -1,10 +1,9 @@
 'use strict'
 const webpack = require('webpack')
 const config = require('./webpack.base.conf')
+const Components = require('../components.json');
 // 修改入口文件
-config.entry = {
-  'zzfui': './src/index.js'
-}
+config.entry = Components
 // 修改输出目录
 config.output = {
   filename: './lib/[name].js',
