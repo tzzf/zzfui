@@ -9,7 +9,7 @@
       {
         'v-button--disabled': disabled,
         'v-button--block': block,
-        'v-button--fixed': fixed,
+        'v-button--fixed': fixed
       }
     ]"
     :style="styles"
@@ -20,25 +20,25 @@
 </template>
 <script>
 export default {
-  name: 'v-button',
+  name: "v-button",
   props: {
     type: {
       validator(v) {
-        return ['default', 'primary', 'warn'].indexOf(v) > -1;
+        return ["default", "primary", "warn"].indexOf(v) > -1;
       },
-      default: 'default',
+      default: "default",
       required: false
     },
     size: {
       validator(v) {
-        return ['normal', 'large', 'middle', 'small'].indexOf(v) > -1;
+        return ["normal", "large", "middle", "small"].indexOf(v) > -1;
       },
-      default: 'normal',
+      default: "normal",
       required: false
     },
     tag: {
       type: String,
-      default: 'button'
+      default: "button"
     },
     disabled: Boolean,
     fixed: Boolean,
@@ -49,11 +49,11 @@ export default {
     }
   },
   methods: {
-    onClick (e) {
+    onClick(e) {
       if (!this.disabled) {
-        this.$emit('click', e)
+        this.$emit("click", e);
       }
     }
   }
-}
+};
 </script>

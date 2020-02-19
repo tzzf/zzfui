@@ -1,41 +1,49 @@
 <template>
   <div class="v-hello">
-      321
-      <div @click="check">787867887798</div>
-      <v-button type="default">默认按钮</v-button>
-      <v-button type="primary">主要按钮</v-button>
-      <v-button type="warn" @click="check">警告按钮</v-button>
-      <v-loading :isLoading="isLoading"></v-loading>
+    321
+    <div @click="check">787867887798</div>
+    <v-button type="default">默认按钮</v-button>
+    <v-button type="primary">主要按钮</v-button>
+    <v-button type="warn" @click="check">警告按钮</v-button>
+    <v-loading :isLoading="isLoading"></v-loading>
   </div>
 </template>
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       isLoading: true
-    }
+    };
   },
-  mounted () {
+  mounted() {
     setTimeout(() => {
-      this.isLoading = false
-    }, 3000)
+      this.isLoading = false;
+    }, 3000);
   },
   methods: {
-    check () {
+    check() {
       this.$dialog({
-        title: '普通 Dialog',
-        cancelText: '取消',
-        okText: '确定',
-        content: '测试 Dialog，测试 Dialog，测试 Dialog~~~',
+        title: "普通 Dialog",
+        cancelText: "取消",
+        okText: "确定",
+        content: "测试 Dialog，测试 Dialog，测试 Dialog~~~",
         onOk: () => {
-          console.log('onOk')
+          // console.log("onOk");
         },
         onCancel: () => {
-          console.log('onCancel')
+          // console.log("onCancel");
         }
-      })
+      });
     }
   }
-}
+};
 </script>
+<style>
+.linedbox {
+  display: inline-block;
+  width: 100px;
+  height: 200px;
+  border: 1px solid red;
+}
+</style>
