@@ -101,7 +101,7 @@
     "npm": ">= 3.0.0"
   },
   "lint-staged": {
-    "**/**.{js,json,pcss,md,vue}": [
+    "**/**.{js,css,vue}": [
       "prettier --write",
       "eslint --fix",
       "git add"
