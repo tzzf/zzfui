@@ -6,6 +6,11 @@
     <v-button type="primary">主要按钮</v-button>
     <v-button type="warn" @click="check">警告按钮</v-button>
     <v-loading :isLoading="isLoading"></v-loading>
+    <v-skeleton :isLoading="isLoading">
+      <div class="xxx">3231</div>
+      <div class="xxx" v-if="isLoading">骨架屏if</div>
+      <div class="xxx" v-else>骨架屏else</div>
+    </v-skeleton>
   </div>
 </template>
 
@@ -39,3 +44,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.xxx {
+  color: red;
+}
+</style>

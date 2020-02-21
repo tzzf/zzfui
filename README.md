@@ -80,3 +80,14 @@ loading组件
 ```html
 <v-loading :isLoading="isLoading"></v-loading>
 ```
+
+
+骨架屏组件
+
+```html
+<v-skeleton :isLoading="isLoading">
+  <div class="xxx">3231</div>
+  <div class="xxx" v-if="isLoading">骨架屏if</div>
+  <div class="xxx" v-else>骨架屏else</div>
+</v-skeleton>
+```
